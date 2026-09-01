@@ -80,7 +80,7 @@ docker run -d \
 
 ### Alternative: running the bot on the host network
 
-If your Minecraft server isn't in Docker (or isn't on the same Docker network as the bot), you can run the bot with `network_mode: host`. This makes the container share the host's network stack directly, so `RCON_HOST` can just be `127.0.0.1` (or `localhost`) if the Minecraft server is running on the same machine or the ip of another machine on your LAN (In this case you may need to ).
+If your Minecraft server isn't in Docker (or isn't on the same Docker network as the bot), you can run the bot with `network_mode: host`. This makes the container share the host's network stack directly, so `RCON_HOST` can just be `127.0.0.1` (or `localhost`) if the Minecraft server is running on the same machine or the ip of another machine on your LAN if the server is running on it.
 
 ```yaml
   whitelist-bot:
