@@ -4,7 +4,7 @@ A small self-hosted Discord bot that lets members with a specific role whitelist
 
 ## Commands
 
-- `/whitelist <username>` — usable only by members with the configured role.Validates the username against Mojang, then adds it via RCON.
+- `/whitelist <username>` — usable only by members with the configured role.Validates the username against Mojang, then adds it to the whitelist via RCON.
 - `/unwhitelist <username>` — admin-only (Discord "Administrator" permission), removes a username via RCON.
 
 ## Setup
@@ -26,10 +26,8 @@ The bot needs to reach the RCON port, put it on the same Docker network as your 
 ### 2. Create the Discord application
 
 1. https://discord.com/developers/applications → **New Application**
-2. **Bot** tab → **Reset Token** → this is your `DISCORD_TOKEN`. No
-   privileged intents are required.
-3. **OAuth2 → URL Generator** → scopes: `bot`, `applications.commands`.
-   Bot permissions: **Send Messages**, **Use Slash Commands**.
+2. **Bot** tab → **Reset Token** → this is your `DISCORD_TOKEN`. 
+3. **OAuth2 → URL Generator** → scopes: `bot`, `applications.commands`. Bot permissions: **Send Messages**, **Use Slash Commands**.
 4. Open the generated URL and invite the bot to your server.
 
 ### 3. Get your IDs
