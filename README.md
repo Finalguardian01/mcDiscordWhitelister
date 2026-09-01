@@ -48,7 +48,7 @@ Directly in Docker Compose
       DISCORD_TOKEN: "your_bot_token"
       GUILD_ID: "your_guild_id"
       ALLOWED_ROLE_ID: "your_role_id"
-      RCON_HOST: minecraft        # your MC server's container/service name
+      RCON_HOST: minecraft        # your minecraft server's container/service name
       RCON_PORT: "25575"
       RCON_PASSWORD: "your_rcon_password"
     networks:
@@ -68,7 +68,7 @@ docker run -d \
   -e DISCORD_TOKEN="your_bot_token" \
   -e GUILD_ID="your_guild_id" \
   -e ALLOWED_ROLE_ID="your_role_id" \
-  -e RCON_HOST="minecraft" \
+  -e RCON_HOST="minecraft" \      # your minecraft server's container/service name
   -e RCON_PORT="25575" \
   -e RCON_PASSWORD="your_rcon_password" \
   --network <network_shared_with_your_mc_server> \
@@ -90,7 +90,7 @@ If your Minecraft server isn't in Docker (or isn't on the same Docker network as
       DISCORD_TOKEN: "your_bot_token"
       GUILD_ID: "your_guild_id"
       ALLOWED_ROLE_ID: "your_role_id"
-      RCON_HOST: "127.0.0.1"
+      RCON_HOST: "127.0.0.1"    # or the ip of the machine the server's running on
       RCON_PORT: "25575"
       RCON_PASSWORD: "your_rcon_password"
 ```
@@ -108,7 +108,7 @@ docker run -d \
   -e DISCORD_TOKEN="your_bot_token" \
   -e GUILD_ID="your_guild_id" \
   -e ALLOWED_ROLE_ID="your_role_id" \
-  -e RCON_HOST="127.0.0.1" \
+  -e RCON_HOST="127.0.0.1" \                # or the ip of the machine the server's running on
   -e RCON_PORT="25575" \
   -e RCON_PASSWORD="your_rcon_password" \
   --restart unless-stopped \
