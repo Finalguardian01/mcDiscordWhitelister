@@ -121,7 +121,7 @@ docker run -d \
 ## Notes
 
 - The bot never touches `whitelist.json` directly, everything goes through RCON, so no restart needed.
-- **`network_mode: host` only works on Linux.** and is currently a beta function on Docker Desktop for Mac/Windows it's silently ignored or unsupported depending on version use `host.docker.internal` as `RCON_HOST` there instead (see the note in the main scenario above).
+- **`network_mode: host` only works on Linux.** and is as of now only a beta function on Docker Desktop for Mac/Windows and may get silently ignored or be unsupported depending on version. You can use `host.docker.internal` as `RCON_HOST` there instead.
 
 ## License
 
